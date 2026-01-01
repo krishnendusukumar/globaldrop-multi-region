@@ -70,8 +70,8 @@ resource "aws_s3_bucket_replication_configuration" "primary_to_secondary" {
 
     filter {} # ← empty filter = all objects
     delete_marker_replication {
-      status = "Enabled"
-    }
+  status = "Enabled"
+}
   }
 
   depends_on = [aws_s3_bucket_versioning.primary, aws_s3_bucket_versioning.secondary]
